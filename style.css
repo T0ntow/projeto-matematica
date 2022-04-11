@@ -1,0 +1,407 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor1: #1C1C1C;
+    --cor2: #416ae4;
+    --cor3: #3071F2;
+    --cor4: #282828;
+
+}
+
+body {
+    height: 100vh;
+}
+
+/* HeaderMYP */
+
+.headerMyP {
+    background-color: var(--cor4);
+    box-shadow: 0px 5px 8px 2px rgba(0, 0, 0, 0.89);
+
+    height: 10vh;
+
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+    position: absolute;
+    width: 100%;
+}
+
+.headerMyP span {
+    color: var(--cor3);
+    font-weight: bold;
+    margin-left: 5vw;
+}
+
+.headerMyP .container-logosMyP {
+    display: flex;
+}
+
+.headerMyP .container-logosMyP .logosMyP {
+    margin: 0 7px;
+    height: 6vh;
+}
+
+/*  */
+
+main {
+    width: 100%;
+    height: 100%;
+
+}
+
+main #background {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: -1;
+
+    filter: grayscale(200%);
+}
+
+
+/* MAIN - Parte1 */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundo2 {
+    width: 600px;
+    height: 400px;
+    opacity: 95%;
+
+    filter: blur(15px);
+    background-color: black;
+}
+
+.conteudo {
+    transform: translate(-80px, -50px);
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+.conteudo h2 {
+    color: #63a5d1;
+
+    font-size: 30px;
+    padding: 40px 0;
+}
+
+.conteudo a {
+    font-style: none;
+    color: white;
+    margin: 7px 0;
+    font-size: 20px;
+}
+
+.conteudo a:hover {
+    transition-duration: .5s;
+    color: var(--cor3);
+}
+
+/* Parte2 */
+#parte2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #282828;
+}
+
+#parte2 > h2 {
+    position: absolute;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 480px;
+    width: 360px;
+    margin-top: 100px;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(128px, auto) repeat(4, 88px);
+  }
+  
+.grid-container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgb(26, 26, 26);
+    color: #eee;
+}
+.grid-container > input {
+    font-size: 1.5rem;
+    text-indent: 10px;
+    border: 1px rgb(20, 20, 20) solid;
+    outline: none;
+    background-color: rgb(63, 63, 63);
+    color: #eee;
+    text-transform: uppercase;
+}
+.grid-container > input::placeholder {
+    font-size: 1rem;
+}
+  
+.grid-container > button:hover {
+    opacity: .7;
+}
+  
+.grid-container > .btn {
+    background: #3772f19c;
+}
+  
+.span-two {
+    grid-column: span 2;
+}
+.span-three {
+    grid-column: span 3;
+}
+.span-for {
+    grid-column: span 4;
+}
+  
+.grid-container > .output {
+    grid-column: 1 / -1;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: auto;
+}
+  
+.grid-container > .output > .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+  
+.grid-container > .output > .current-operand {
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+}
+#previous-operand-base{
+    margin: 0 15px;
+    color: #e9b57b;
+}
+#result{
+    background-color: rgb(250, 95, 75);
+}
+  
+button > img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0);
+}
+/* Converter */
+
+.converter {
+    padding: 15px;
+    margin-top: 100px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 360px;
+    font-size: 1.5rem;
+    background: #0d0d0d86;
+}
+
+.converter label {
+    width: 100%;
+        color: #ffff;
+}
+
+.converter>div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 15px;
+}
+
+.converter input {
+    text-transform: uppercase;
+    text-indent: 10px;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    border: none;
+    overflow: inherit;
+    background-color: #111;
+    color: #ffff;
+}
+
+.converter .resultadoTela {
+    height: 130px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+.converter .resultadoTela .resultado {
+    text-indent: 15px;
+    flex-grow: 3;
+    word-wrap: break-word;
+    width: 100%;
+
+    color: #ffff;
+}   
+
+#converter,
+#resetar {
+    border: 0;
+    width: 90px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#converter:hover,
+#resetar:hover {
+    transition-duration: .3s;
+    opacity: .7;
+}
+
+#converter {
+    background-color: rgb(95, 240, 95);
+}
+
+#resetar {
+    background-color: rgb(240, 141, 95);
+}
+
+#inverter {
+    background-color: rgb(214, 240, 98);
+}
+
+
+#parte2:focus{
+    transition-duration: 2s;
+}
+
+/* parte3 */
+
+#parte3{
+    background-color: #282828;
+    height: 100vh;
+}
+#parte3 > h2{
+    justify-content: center;
+    display: flex;
+    padding: 20px 0;
+}
+
+#parte3 > div{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+table{
+    background-color:#3256A3;
+    width: 700px;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+table th{
+    padding: 0 15px;
+    background-color: #3256A3;
+}
+
+table td{
+    width: 33% ;
+    background-color: rgb(187, 187, 238);
+}
+
+@media screen and (max-width: 840px) {
+    .headerMyP{
+
+    }
+    #parte2{
+        flex-direction: column;
+        align-items: center;
+    }
+    #parte2 h2{
+       position: relative;
+    }
+    
+    .grid-container{
+        grid-template-columns: repeat(4, 120px);
+        grid-template-rows: minmax(140px, auto) repeat(4, 110px);
+    }
+
+    .grid-container > .output > .previous-operand {
+        font-size: 2rem;
+    }
+    .grid-container > .output > .current-operand {
+        font-size: 3rem;
+    }
+    .grid-container > input {
+        font-size:2rem;
+    }
+    .converter{
+        height: 550px;
+        width: 480px;
+        font-size: 1.8rem;
+    }
+    .converter input{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .grid-container{
+        grid-template-columns: repeat(4, 85px);
+        grid-template-rows: minmax(110px, auto) repeat(4, 90px);
+    }
+
+    .grid-container > .output > .previous-operand {
+        font-size: 1.5rem;
+    }
+    .grid-container > .output > .current-operand {
+        font-size: 2rem;
+    }
+    .grid-container > input {
+        font-size:1.5rem;
+    }
+    .converter{
+        height: 470px;
+        width: 360px;
+        font-size: 1.5rem;
+    }
+    .converter input{
+        font-size: 1.5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 470px) {
+    .headerMyP {
+        justify-content: center;
+    }
+    .headerMyP span{
+        display: none;
+    }
+}
