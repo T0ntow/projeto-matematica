@@ -10,7 +10,6 @@ const valueNumber2 = document.getElementById('num2');
 valueBase1.addEventListener('input', function (event) {
     const base1Value = event.target.value;
     document.querySelector('#previous-operand-base').innerHTML = (base1Value);
-    console.log(base1Value)
 })
 
 valueNumber1.addEventListener('input', function (event) {
@@ -19,11 +18,15 @@ valueNumber1.addEventListener('input', function (event) {
     document.querySelector('#previous-operand-num1').innerHTML = (number1Value);
 })
 
+function adicionarOperador(op) {
+    operador = op;
+    document.querySelector('#previous-operand-op').innerHTML = op;
+}
 valueNumber2.addEventListener('input', function (event) {
     const number2Value = event.target.value;
     document.querySelector('#previous-operand-num2').innerHTML = (number2Value);
 })
-
+    
 function getNumbers() {
     number1 = document.getElementById('num1').value;
     number2 = document.getElementById('num2').value;
@@ -47,11 +50,6 @@ function result() {
     document.querySelector('.current-operand').innerHTML = (result.toString(base));
 }
 
-function adicionarOperador(op) {
-    operador = op;
-    document.querySelector('#previous-operand-op').innerHTML = op;
-}
-
 function clean() {
     document.querySelector('.current-operand').innerHTML = '';
     document.getElementById('num1').value = '';
@@ -67,18 +65,28 @@ function getNumbers2() {
     fromBase = document.getElementById('fromBase').value;
     toBase = document.getElementById('toBase').value;
     tela = document.querySelector('.resultado');
+    
 }
 function calcular() {
     getNumbers2();
-
     resultado = parseInt(number1Parte2, fromBase);
-
     tela.innerHTML = (resultado.toString(toBase));
 }
 function reset() {
     document.getElementById('num1Parte2').value = '';
     document.getElementById('fromBase').value = '';
     document.getElementById('toBase').value = '';
-    document.querySelector('.resultado').innerHTML = '';
+    document.querySelector('.resultado').innerHTML = 'RESULT';
 }
 
+// pop-up
+
+function abrir(){
+    document.querySelector('.current-operand').style.display = 'none';
+    if (document.querySelector('.popup').style.display === 'none' ){
+        document.querySelector('.popup').style.display = 'block';
+    }else{
+        document.querySelector('.popup').style.display = 'none';
+        document.querySelector('.current-operand').style.display = 'block';
+    }
+}

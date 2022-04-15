@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+
+  
+  <link href="//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons" rel="stylesheet"
+    type="text/css" />
+    
 </head>
 
 <body>
@@ -21,31 +26,31 @@
       <a href="https://github.com/T0ntow" target="_blank" rel=external>
         <img class="logosMyP" src="img/GitHub-Logo.png" alt="LogoGit">
       </a>
-
       <a href="https://api.whatsapp.com/send?phone=5577988431249&text=" target="_blank" rel=external>
         <img class="logosMyP" src="img/WhatsLogo.png" alt="LogoWhats">
       </a>
-
     </div>
 
   </div>
 
-  <main>
+  <main >
     <img id="background" src="img/fundo.png" alt="">
-
     <!-- Parte1 -->
-
-    <div class="container">
+    
+    <div class="container" id="parte1">
+      
       <div class="fundo2"></div>
-
+      
       <div class="conteudo">
         <h2>Selecione o que deseja fazer</h2>
-
-        <a href="#parte2">Calcular bases e converter</a>
+        
+        <a href="#parte2">Calcular e converter bases</a>
         <a href="#parte3">Tabela de conversão</a>
-        <a href="/">Criado por: CONTATO</a>
       </div>
     </div>
+    
+    <hr>
+
     <!-- Parte2 -->
 
     <section id="parte2">
@@ -54,14 +59,28 @@
       <div class="grid-container">
 
         <div class="output">
-          <div class="previous-operand">
+          <div class="previous-operand" id="previous-operand">
             <p id="previous-operand-base"></p>
             <p id="previous-operand-num1"></p>
             <p id="previous-operand-op"></p>
             <p id="previous-operand-num2"></p>
+            <div>
+              <button onclick="abrir()"><img src="img/pergunta.png" alt=""></button>
+            </div>
           </div>
-          <div class="current-operand">
+
+          <!-- pop-up -->
+
+          <div class="popup">
+            <p id="popup">Usar a calculadora é muito simles, primeiramente insira dois números que deseja calcular e sua
+              respectiva
+              base, após isso é so clicar na operação desejada e por fim ver o resultado da operação
+              OBS: funciona as operações ate a base 36
+            </p>
           </div>
+
+          <!-- resultado final -->
+          <div class="current-operand"></div>
         </div>
 
         <button class="span-two" onclick="clean()"><img src="img/limpar.png"></button>
@@ -75,125 +94,141 @@
         <button class="span-one" onclick="result()" id="result">=</button>
       </div>
 
+
+
       <div class="converter">
-        <label>Entre com o Número </label>
+        <label>Enter Number </label>
         <input type="text" id="num1Parte2" min="1" max="36">
 
-        <label>Da Base</label>
-        <input type="number" id="fromBase" value="10" min="1" max="36">
+        <label>From Base</label>
+        <div class="rowInput">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"> - </button>
+          <input id="fromBase" type="number" min="2" max="36" value="10">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"> + </button>
+        </div>
 
-        <label>Para Base</label>
-        <input type="number" id="toBase" value="16" min="1" max="36">
+        <label>To base</label>
+        <div class="rowInput">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"> - </button>
+          <input id="toBase" type="number" min="2" max="36" value="10">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"> + </button>
+        </div>
 
         <div>
           <button type="button" onclick="calcular()" id="converter">Converter</button>
           <button type="reset" onclick="reset()" id="resetar">Resetar</button>
         </div>
-
-        <label>Resultado</label>
-        <div class="resultadoTela"> 
-          <p class="resultado"></p>
+        <hr>
+        <div class="resultadoTela">
+          <p class="resultado">RESULT</p>
         </div>
       </div>
 
     </section>
-
+    <hr>
     <!-- Parte3 -->
 
     <section id="parte3">
       <h2>Tabela das Bases Númericas</h2>
-    <div>
-      <table>
-        <tr>
-          <th>Decimal (Base-10) </th>
-          <th>Binário (Base-2) </th>
-          <th>Hexadecimal (Base-16) </th>
-        </tr>  
-        <tr>
-          <td>0</td>
-          <td>0000</td>
-          <td>0</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>0001</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>0010</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>0011</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>0100</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>0101</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>0110</td>
-          <td>6</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>0111</td>
-          <td>7</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>1000</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>1001</td>
-          <td>9</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>1010</td>
-          <td>A</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>1011</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>1100</td>
-          <td>C</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>1101</td>
-          <td>D</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>1110</td>
-          <td>E</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>111</td>
-          <td>F</td>
-        </tr>
-    </table>
-    </div>
-      
+      <div>
+        <table>
+          <tr>
+            <th>Decimal (Base-10) </th>
+            <th>Binário (Base-2) </th>
+            <th>Hexadecimal (Base-16) </th>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>0000</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>0001</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>0010</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>0011</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>0100</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>0101</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>0110</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>0111</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>1000</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>1001</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>1010</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>1011</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>1100</td>
+            <td>C</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>1101</td>
+            <td>D</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>1110</td>
+            <td>E</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>1111</td>
+            <td>F</td>
+          </tr>
+        </table>
+      </div>
+
 
     </section>
+
+    <footer id="parte4">
+
+        <a href="#parte1"><span>Inicio</span></a>
+        <span>Número de contato: (77) 98843-1249</span>
+
+    </footer>
 
   </main>
 
