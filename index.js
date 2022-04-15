@@ -7,6 +7,8 @@ const valueBase1 = document.getElementById('base');
 const valueNumber1 = document.getElementById('num1');
 const valueNumber2 = document.getElementById('num2');
 
+// calculadora var
+
 valueBase1.addEventListener('input', function (event) {
     const base1Value = event.target.value;
     document.querySelector('#previous-operand-base').innerHTML = (base1Value);
@@ -18,15 +20,15 @@ valueNumber1.addEventListener('input', function (event) {
     document.querySelector('#previous-operand-num1').innerHTML = (number1Value);
 })
 
-function adicionarOperador(op) {
-    operador = op;
-    document.querySelector('#previous-operand-op').innerHTML = op;
-}
 valueNumber2.addEventListener('input', function (event) {
     const number2Value = event.target.value;
     document.querySelector('#previous-operand-num2').innerHTML = (number2Value);
 })
-    
+function adicionarOperador(op) {
+    operador = op;
+    document.querySelector('#previous-operand-op').innerHTML = op;
+}
+
 function getNumbers() {
     number1 = document.getElementById('num1').value;
     number2 = document.getElementById('num2').value;
@@ -34,7 +36,7 @@ function getNumbers() {
     number1 = parseInt(number1, base);
     number2 = parseInt(number2, base);
 }
-
+// calculadora
 function result() {
     let result = '';
     getNumbers();

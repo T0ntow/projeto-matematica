@@ -83,15 +83,15 @@
           <div class="current-operand"></div>
         </div>
 
-        <button class="span-two" onclick="clean()"><img src="img/limpar.png"></button>
+        <button class="btn" onclick="adicionarOperador('+')" value="+"><img src="img/somar.png"></button>
         <button class="btn" onclick="adicionarOperador('*')" value="*"><img src="img/multiplicar.png"></button>
         <button class="btn" onclick="adicionarOperador('/')" value="/"><img src="img/dividir.png"></button>
-        <input class="span-three" type="number" placeholder="Digite a Base" min="2" max="36" id="base">
-        <button class="btn" onclick="adicionarOperador('+')" value="+"><img src="img/somar.png"></button>
-        <input class="span-three" type="text" placeholder="Digite o Primeiro número" id="num1">
         <button class="btn" onclick="adicionarOperador('-')" value="-"><img src="img/subtrair.png"></button>
+        <input class="span-three" type="number" placeholder="Digite a Base" min="2" max="36" id="base">
+        <button class="span-one" onclick="clean()"><img src="img/limpar.png"></button>
+        <input class="span-three" type="text" placeholder="Digite o Primeiro número" id="num1">
+        <button class="span-one column-two"  onclick="result()" id="result"><img src="img/igual.png" alt=""></button>
         <input class="span-three" type="text" placeholder="Digite o Segundo número" id="num2">
-        <button class="span-one" onclick="result()" id="result">=</button>
       </div>
 
 

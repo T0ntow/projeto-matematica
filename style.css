@@ -6,8 +6,7 @@
     scroll-behavior: smooth;
 }
 
-
-:root{
+:root {
     --cor0: #1C1C1C;
     --cor1: #4870DB;
     --cor2: #b5a8e4;
@@ -61,7 +60,7 @@ body {
     width: 100%;
     z-index: 3;
 
-    background-color:  #1c1c1cd7;
+    background-color: #1c1c1cd7;
     box-shadow: 0px 5px 8px 2px #000000e3;
 }
 
@@ -108,6 +107,7 @@ hr {
     border: none;
     height: 7px;
 }
+
 /* MAIN - Parte1 */
 
 .container {
@@ -174,7 +174,7 @@ hr {
 
     font-size: 1.8rem;
     letter-spacing: 3px;
-    color: var(--cor1);
+    color: white;
 }
 
 .grid-container {
@@ -194,7 +194,7 @@ hr {
     border: none;
     outline: none;
 
-    background-color: var(--cor2);
+    background-color:#8ff5db;
     color: #eee;
 }
 
@@ -219,7 +219,10 @@ hr {
 }
 
 .grid-container>.btn {
-    background: var(--cor3);
+    background: rgb(188, 245, 247);
+}
+.column-two{
+    grid-row: span 2;
 }
 .span-two {
     grid-column: span 2;
@@ -266,7 +269,8 @@ hr {
 }
 
 #result {
-    background-color: rgb(250, 95, 75);
+    background-color: #5ff0b8;
+    color: black;
 }
 
 button>img {
@@ -382,11 +386,11 @@ button>img {
 }
 
 #converter {
-    background-color: rgb(95, 240, 95);
+    background-color: #5ff0b8;
 }
 
 #resetar {
-    background-color: rgb(240, 141, 95);
+    background-color:#fd8171;
 }
 
 #inverter {
@@ -461,7 +465,7 @@ input[type=number]::-webkit-outer-spin-button {
 
     font-size: 2rem;
     letter-spacing: 3px;
-    color: var(--cor1);
+    color: white;
 }
 
 #parte3>div {
@@ -476,24 +480,23 @@ table {
     width: 700px;
     font-size: 1.5rem;
     text-align: center;
-    background-color: var(--cor4)
-
+    background-color:#5AC099;
 }
 
 table th {
     padding: 0 15px;
     color: white;
-    background-color: var(--cor4);
+    background-color: #5AC099;
 }
 
 table td {
     width: 33%;
-    background-color: var(--cor2);
+    background-color: #a9fce7;
 }
 
 /* footer */
 
-footer{
+footer {
     background-color: var(--cor0);
     border-top: 3px solid black;
     height: 10vh;
@@ -505,13 +508,15 @@ footer{
     align-items: center;
 }
 
-footer a{
+footer a {
     color: white;
     text-decoration: underline;
 }
-footer span{
-   margin: 0 20px;
+
+footer span {
+    margin: 0 20px;
 }
+
 @media screen and (max-width: 840px) {
     #parte2 {
         flex-direction: column;
