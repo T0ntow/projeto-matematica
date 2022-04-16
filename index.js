@@ -53,7 +53,7 @@ function result() {
 }
 
 function clean() {
-    document.querySelector('.current-operand').innerHTML = '';
+    document.querySelector('current-operand').innerHTML = '';
     document.getElementById('num1').value = '';
     document.getElementById('num2').value = '';
     document.getElementById('base').value = '';

@@ -64,8 +64,9 @@
             <p id="previous-operand-num1"></p>
             <p id="previous-operand-op"></p>
             <p id="previous-operand-num2"></p>
-            <div>
+            <div class="output-lateral">
               <button onclick="abrir()"><img src="img/pergunta.png" alt=""></button>
+              <button onclick="copiarTexto()" id="copiar"><img src="img/copiar.png" alt=""></button>
             </div>
           </div>
 
@@ -77,10 +78,12 @@
               base, após isso é so clicar na operação desejada e por fim ver o resultado da operação
               OBS: funciona as operações ate a base 36
             </p>
+         
+
           </div>
 
           <!-- resultado final -->
-          <div class="current-operand"></div>
+          <div class="current-operand" id="current-operand"></div>
         </div>
 
         <button class="btn" onclick="adicionarOperador('+')" value="+"><img src="img/somar.png"></button>
@@ -122,6 +125,7 @@
         <div class="resultadoTela">
           <p class="resultado">RESULT</p>
         </div>
+        <hr>
       </div>
 
     </section>
@@ -216,7 +220,7 @@
             <td>15</td>
             <td>1111</td>
             <td>F</td>
-          </tr>
+          </tr> 
         </table>
       </div>
 

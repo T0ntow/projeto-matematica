@@ -19,6 +19,7 @@
 }
 
 /* globais */
+
 body {
     height: 100vh;
     color: white;
@@ -254,6 +255,7 @@ main #background {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    padding-right: 25px;
     word-wrap: break-word;
     word-break: break-all;
     overflow: auto;
@@ -296,14 +298,15 @@ button>img {
 
 /* pop-up */
 
-.previous-operand>div {
+.previous-operand>.output-lateral {
     position: absolute;
-    transform: translateX(320px);
+        transform: translateX(320px);
 }
 
 .previous-operand>div button {
     display: flex;
     border: 1px solid;
+    margin-top: 20px;
     border-radius: 50%;
 
     background-color: var(--cor5);
@@ -324,6 +327,8 @@ button>img {
     transition: .5s ease;
     transform: scale(1.4);
 }
+
+
 
 /* Converter */
 
