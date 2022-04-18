@@ -49,11 +49,12 @@ function result() {
     } else if (operador === '/') {
         result = number1 / number2;
     }
-    document.querySelector('.current-operand').innerHTML = (result.toString(base));
+    document.getElementById('current-operand').value = (result.toString(base));
+    console.log(result.toString(base))
 }
 
 function clean() {
-    document.querySelector('current-operand').innerHTML = '';
+    document.querySelector('.current-operand').innerHTML = '';
     document.getElementById('num1').value = '';
     document.getElementById('num2').value = '';
     document.getElementById('base').value = '';
@@ -92,3 +93,14 @@ function abrir(){
         document.querySelector('.current-operand').style.display = 'block';
     }
 }
+
+// copiar
+
+function copiarTexto(){
+    var copiado = document.getElementById('current-operand').value;
+
+    navigator.clipboard.writeText(copiado)
+    document.getElementById('copiar').style.focus
+    
+    console.log(copiado)
+};

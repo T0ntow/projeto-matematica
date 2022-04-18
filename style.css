@@ -239,9 +239,6 @@ main #background {
     color: #eee;
 }
 
-
-
-
 .grid-container>button:hover {
     opacity: .7;
 }
@@ -274,7 +271,10 @@ main #background {
     text-align: right;
     font-size: 2rem;
 }
-
+.grid-container>.output>input{
+    border: none;
+    background-color: #1E1E1E;
+}
 button>img {
     width: 35px;
     height: 35px;
@@ -328,7 +328,9 @@ button>img {
     transform: scale(1.4);
 }
 
-
+#copiar:focus{
+    background-color:var(--cor7);
+}
 
 /* Converter */
 
