@@ -8,10 +8,10 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
 
-  
+
   <link href="//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons" rel="stylesheet"
     type="text/css" />
-    
+
 </head>
 
 <body>
@@ -33,22 +33,22 @@
 
   </div>
 
-  <main >
+  <main>
     <img id="background" src="img/fundo.png" alt="">
     <!-- Parte1 -->
-    
+
     <div class="container" id="parte1">
-      
+
       <div class="fundo2"></div>
-      
+
       <div class="conteudo">
         <h2>Selecione o que deseja fazer</h2>
-        
+
         <a href="#parte2">Calcular e converter bases</a>
         <a href="#parte3">Tabela de conversão</a>
       </div>
     </div>
-    
+
     <hr>
 
     <!-- Parte2 -->
@@ -73,17 +73,19 @@
           <!-- pop-up -->
 
           <div class="popup">
-            <p id="popup">Usar a calculadora é muito simles, primeiramente insira dois números que deseja calcular e sua
+            <p id="popup" style="text-transform: none;">Usar a calculadora é muito simles, primeiramente insira dois números e sua
               respectiva
-              base, após isso é so clicar na operação desejada e por fim ver o resultado da operação
-              OBS: funciona as operações ate a base 36
+              base, após isso é so clicar na operação desejada e ver o resultado da operação<p style="color: aqua; margin-top: 5px; text-transform: none">OBS: funciona as operações ate a base 36</p> 
             </p>
-         
+
 
           </div>
 
           <!-- resultado final -->
-          <input type="text" class="current-operand" id="current-operand" disabled="">
+          <div class="current-operand">
+            <input type="text" id="current-operand" disabled="">
+          </div>
+
         </div>
 
         <button class="btn" onclick="adicionarOperador('/')" value="/"><img src="img/dividir.png"></button>
@@ -93,7 +95,7 @@
         <input class="span-three" type="number" placeholder="Digite a Base" min="2" max="36" id="base">
         <button class="span-one" onclick="clean()"><img src="img/limpar.png"></button>
         <input class="span-three" type="text" placeholder="Digite o Primeiro número" id="num1">
-        <button class="span-one column-two"  onclick="result()" id="result"><img src="img/igual.png" alt=""></button>
+        <button class="span-one column-two" onclick="result()" id="result"><img src="img/igual.png" alt=""></button>
         <input class="span-three" type="text" placeholder="Digite o Segundo número" id="num2">
       </div>
 
@@ -130,6 +132,7 @@
 
     </section>
     <hr>
+
     <!-- Parte3 -->
 
     <section id="parte3">
@@ -220,7 +223,7 @@
             <td>15</td>
             <td>1111</td>
             <td>F</td>
-          </tr> 
+          </tr>
         </table>
       </div>
 
@@ -229,8 +232,8 @@
 
     <footer id="parte4">
 
-        <a href="#parte1"><span>Inicio</span></a>
-        <span>Número de contato: (77) 98843-1249</span>
+      <a href="#parte1"><span>Inicio</span></a>
+      <span>Número de contato: (77) 98843-1249</span>
 
     </footer>
 

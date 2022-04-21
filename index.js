@@ -51,10 +51,14 @@ function result() {
     }
     document.getElementById('current-operand').value = (result.toString(base));
     console.log(result.toString(base))
-}
+}   
+function clean(){
+    document.getElementById('previous-operand-base').innerHTML = '';
+    document.getElementById('previous-operand-num1').innerHTML = '';
+    document.getElementById('previous-operand-num2').innerHTML = '';
+    document.getElementById('previous-operand-op').innerHTML = '';
 
-function clean() {
-    document.querySelector('.current-operand').innerHTML = '';
+    document.querySelector('.current-operand').innerHTML = '';  
     document.getElementById('num1').value = '';
     document.getElementById('num2').value = '';
     document.getElementById('base').value = '';
@@ -82,7 +86,7 @@ function reset() {
     document.querySelector('.resultado').innerHTML = 'RESULT';
 }
 
-// pop-up
+// pop-up - pergunta
 
 function abrir(){
     document.querySelector('.current-operand').style.display = 'none';
@@ -97,7 +101,7 @@ function abrir(){
 // copiar
 
 function copiarTexto(){
-    var copiado = document.getElementById('current-operand').value;
+    let copiado = document.getElementById('current-operand').value;
 
     navigator.clipboard.writeText(copiado)
     document.getElementById('copiar').style.focus

@@ -59,20 +59,6 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 1rem;
 }
 
-.output::-webkit-scrollbar {
-    width: 13px;
-}
-
-.output::-webkit-scrollbar-track {
-    background: rgb(19, 19, 19);
-}
-
-.output::-webkit-scrollbar-thumb {
-    background-color: rgb(41, 41, 41);
-    border-radius: 20px;
-    border: 3px solid rgb(117, 117, 117);
-}
-
 .resultado::-webkit-scrollbar {
     width: 13px;
 }
@@ -209,7 +195,7 @@ main #background {
 
 #previous-operand-base {
     margin: 0 15px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #e9b57b;
 }
 
@@ -255,25 +241,23 @@ main #background {
     padding-right: 25px;
     word-wrap: break-word;
     word-break: break-all;
-    overflow: auto;
     text-transform: uppercase;
     background: #1E1E1E;
 }
-
 .grid-container>.output>.previous-operand {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
+    overflow: hidden;
 
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.75);   
 }
 
-.grid-container>.output>.current-operand {
-    text-align: right;
-    font-size: 2rem;
-}
-.grid-container>.output>input{
+.grid-container>.output>.current-operand>input{
     border: none;
+    text-align: right;
+    width: 90%;
     background-color: #1E1E1E;
+    font-size: 1.6rem;
 }
 button>img {
     width: 35px;
@@ -296,30 +280,31 @@ button>img {
     grid-column: span 4;
 }
 
-/* pop-up */
+/* pop-up - */
 
 .previous-operand>.output-lateral {
     position: absolute;
-        transform: translateX(320px);
+    transform: translateX(318px);
 }
 
 .previous-operand>div button {
     display: flex;
     border: 1px solid;
-    margin-top: 20px;
+    margin-top: 17px;
     border-radius: 50%;
 
     background-color: var(--cor5);
 }
 
 .previous-operand img {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
 }
 
 .popup {
     text-align: center;
     display: none;
+    font-size: 1rem;
 }
 
 .previous-operand div button:hover {
@@ -543,10 +528,20 @@ footer span {
     .converter input {
         font-size: 2rem;
     }
+    .previous-operand>.output-lateral {
+        transform: translateX(420px);
+    }
+    .previous-operand.output-lateral>button{
+        margin-top: 15px;
+    }
 
-    .previous-operand>div {
-        position: absolute;
-        transform: translateX(430px);
+    .previous-operand>.output-lateral>button>img{
+        width: 30px;
+        height: 30px;
+    }
+
+    #previous-operand-base {
+        font-size: 1.5rem;
     }
 
 }
@@ -592,10 +587,19 @@ footer span {
         font-size: 1.2rem;
     }
 
-    .previous-operand>div {
-        position: absolute;
-        transform: translateX(300px);
+    .previous-operand > .output-lateral {
+        transform: translateX(290px);
     }
+    .previous-operand > .output-lateral>button{
+        margin-top: 10px;
+    }
+
+    .previous-operand > .output-lateral>button>img{
+        width: 25px;
+        height: 25px;
+    }
+
+   
 }
 
 @media screen and (max-width: 470px) {
