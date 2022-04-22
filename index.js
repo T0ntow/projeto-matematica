@@ -38,6 +38,7 @@ function getNumbers() {
 }
 // calculadora
 function result() {
+
     let result = '';
     getNumbers();
     if (operador === '+') {  
@@ -50,6 +51,8 @@ function result() {
         result = number1 / number2;
     }
     document.getElementById('current-operand').value = (result.toString(base));
+    document.querySelector('.current-operand').style.display = 'block';  
+
     console.log(result.toString(base))
 }   
 function clean(){
@@ -57,13 +60,13 @@ function clean(){
     document.getElementById('previous-operand-num1').innerHTML = '';
     document.getElementById('previous-operand-num2').innerHTML = '';
     document.getElementById('previous-operand-op').innerHTML = '';
+    document.querySelector('.current-operand').style.display = 'none';  
 
-    document.querySelector('.current-operand').innerHTML = '';  
+
     document.getElementById('num1').value = '';
     document.getElementById('num2').value = '';
     document.getElementById('base').value = '';
 }
-
 
 // Converter 
 
@@ -89,7 +92,12 @@ function reset() {
 // pop-up - pergunta
 
 function abrir(){
-    document.querySelector('.current-operand').style.display = 'none';
+    document.getElementById('previous-operand-base').innerHTML = '';
+    document.getElementById('previous-operand-num1').innerHTML = '';
+    document.getElementById('previous-operand-num2').innerHTML = '';
+    document.getElementById('previous-operand-op').innerHTML = '';
+    document.querySelector('.current-operand').style.display = 'none'; 
+    
     if (document.querySelector('.popup').style.display === 'none' ){
         document.querySelector('.popup').style.display = 'block';
     }else{
