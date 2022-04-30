@@ -84,7 +84,7 @@
 
           <!-- resultado final -->
           <div class="current-operand">
-            <input type="text" class="current-operand" id="current-operand" disabled="">
+            <input type="text" class="current-operand" id="current-operand" disabled="" > 
           </div>
 
         </div>
@@ -93,18 +93,18 @@
         <button class="btn" onclick="adicionarOperador('*')" value="*"><img src="img/multiplicar.png"></button>
         <button class="btn" onclick="adicionarOperador('-')" value="-"><img src="img/subtrair.png"></button>
         <button class="btn" onclick="adicionarOperador('+')" value="+"><img src="img/somar.png"></button>
-        <input class="span-three" type="number" placeholder="Digite a Base" min="2" max="36" id="base">
+        <input class="span-three" type="number" placeholder="Digite a Base" min="2" max="36" id="base" autocomplete="off">
         <button class="span-one" onclick="clean()"><img src="img/limpar.png"></button>
-        <input class="span-three" type="text" placeholder="Digite o Primeiro número" id="num1">
+        <input class="span-three" type="text" placeholder="Digite o Primeiro número" id="num1" autocomplete="off">
         <button class="span-one column-two" onclick="result()" id="result"><img src="img/igual.png" alt=""></button>
-        <input class="span-three" type="text" placeholder="Digite o Segundo número" id="num2">
+        <input class="span-three" type="text" placeholder="Digite o Segundo número" id="num2" autocomplete="off">
       </div>
 
 
 
       <div class="converter">
         <label>Enter Number </label>
-        <input type="text" id="num1Parte2" min="1" max="36">
+        <input type="text" id="num1Parte2" min="1" max="36"  autocomplete="off">
 
         <label>From Base</label>
         <div class="rowInput">
@@ -116,7 +116,7 @@
         <label>To base</label>
         <div class="rowInput">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"> - </button>
-          <input id="toBase" type="number" min="2" max="36" value="10">
+          <input id="toBase" type="number" min="2" max="36" value="10" autocomplete="off">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"> + </button>
         </div>
 

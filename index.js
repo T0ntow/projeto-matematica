@@ -62,7 +62,6 @@ function clean(){
     document.getElementById('previous-operand-op').innerHTML = '';
     document.querySelector('.current-operand').style.display = 'none';  
 
-
     document.getElementById('num1').value = '';
     document.getElementById('num2').value = '';
     document.getElementById('base').value = '';
@@ -112,7 +111,5 @@ function copiarTexto(){
     let copiado = document.getElementById('current-operand').value;
 
     navigator.clipboard.writeText(copiado)
-    document.getElementById('copiar').style.focus
-    
     console.log(copiado)
 };
