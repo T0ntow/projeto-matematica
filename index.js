@@ -113,3 +113,24 @@ function copiarTexto(){
     navigator.clipboard.writeText(copiado)
     console.log(copiado)
 };
+
+// 
+
+const html = document.querySelector('html')
+const swit = document.querySelector('.switch')
+const checkbox = document.querySelector('#switch')
+
+let isTemaClaro = false
+
+function toggleTema(){
+    isTemaClaro = !isTemaClaro
+    let img = document.querySelector('#background');
+    if(isTemaClaro) {
+        img.src = 'img/background2.jpeg'
+    } else {
+        img.src = 'img/fundo.png'
+    }
+    html.classList.toggle('light-mode');
+    swit.classList.toggle('active');
+    
+}

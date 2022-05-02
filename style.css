@@ -5,19 +5,45 @@
 
     scroll-behavior: smooth;
 }
-
 :root {
+    --fundo: rgb(0, 0, 0);
+    --back1: linear-gradient(#202020, rgb(99, 99, 99));
+    --inp: #3f3f3f;
+    --font: #fff;
     --cor0: #1C1C1C;
     --cor1: #4870DB;
-    --cor2: #b5a8e4;
+    --cor2: #2b2b2b;
     --cor3: #441ADB;
     --cor4: #150842;
     --cor5: #7AA6FF;
     --cor6: #55A8FF;
     --cor7: #00BCD4;
     --cor8: #fd8171;
+    --cor9: #ff943cc2;
+
 }
 
+.light-mode:root{
+    --font: rgb(0, 0, 0);
+    --fundo: rgb(197, 197, 197);
+    --back1: linear-gradient(#d8d8d8, rgb(255, 255, 255));
+    --inp: #f3f3f3;
+
+    --cor0: #bbbbbb;
+    --cor1: #000000;
+    --cor2: #e7e7e7;
+    --cor5: #e4e4e4;
+    --cor6: #e4e4e4;
+    --cor7: #e4e4e4;
+    --cor8: #ffffff;
+    --cor9: #000000c2;
+}
+.light-mode body{
+    color: black;
+}
+#background2{
+    display: none;
+}
 /* globais */
 
 body {
@@ -44,9 +70,12 @@ input {
     text-transform: uppercase;
     outline: none;
 
-    background-color: #3f3f3f;
-    color: white;
-    border: 1px #141414 solid;
+    background-color:var(--inp);
+    color: var(--font);
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 1px solid rgb(31, 31, 31);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -103,8 +132,52 @@ input[type=number]::-webkit-outer-spin-button {
     height: 6vh;
 }
 
-/*  */
+/*switch dark-mode*/
 
+.container-switch{
+    display: flex;
+    margin-right: 25px;
+    align-items: center;
+}
+.container-switch>img{
+   height: 20px;
+   width: 18px;
+   position: absolute;
+   z-index: -1;
+   margin: 5px;
+}
+
+#lua{
+    margin: 0 36px;
+}
+.switch{
+    width: 60px;
+    height: 28px;
+    cursor: pointer;
+
+    display: block;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 60px;
+
+}
+.switch:before{
+    content: '';
+    background-image:'img/sol.png';
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    width: 20px;
+    margin: 1px;
+
+    height: 22px;
+    background-color: #ffffff;
+    transition: all .5s;
+
+}
+.switch.active:before{
+    transform: translateX(33px);
+}
+/*  */
 main {
     width: 100%;
     height: 100%;
@@ -140,7 +213,7 @@ main #background {
     opacity: 95%;
 
     filter: blur(15px);
-    background-color: black;
+    background-color: var(--fundo);
 }
 
 .conteudo {
@@ -151,7 +224,7 @@ main #background {
     display: flex;
     flex-direction: column;
 
-    color: white;
+    color: var(--font);
 }
 
 .conteudo h2 {
@@ -167,7 +240,7 @@ main #background {
 
     margin: 7px 0;
 
-    color: white;
+    color: var(--font);
 }
 
 .conteudo a:hover {
@@ -181,7 +254,7 @@ main #background {
     display: flex;
     justify-content: space-evenly;
 
-    background-image: linear-gradient(#202020, rgb(99, 99, 99));
+    background-image: var(--back1);
 }
 
 #parte2>h2 {
@@ -191,12 +264,12 @@ main #background {
 
     font-size: 1.8rem;
     letter-spacing: 3px;
-}
+}   
 
 #previous-operand-base {
     margin: 0 15px;
     font-size: 1.1rem;
-    color: #e9b57b;
+    color: var(--cor9);
 }
 
 #result {
@@ -222,7 +295,7 @@ main #background {
     outline: none;
 
     background-color: var(--cor6);
-    color: #eee;
+    color:var(--font);
 }
 
 .grid-container>button:hover {
@@ -242,21 +315,21 @@ main #background {
     word-wrap: break-word;
     word-break: break-all;
     text-transform: uppercase;
-    background: #1E1E1E;
+    background: var(--cor0);
 }
 .grid-container>.output>.previous-operand {
     font-size: 1.2rem;
     display: flex;
     overflow: hidden;
 
-    color: rgba(255, 255, 255, 0.75);   
+    color: var(--font);   
 }
 
 .grid-container>.output>.current-operand>input{
     border: none;
     text-align: right;
     width: 90%;
-    background-color: #1E1E1E;
+    background-color:var(--cor0);
     font-size: 1.6rem;
 }
 button>img {
@@ -331,7 +404,7 @@ button>img {
     flex-direction: column;
     align-items: center;
 
-    background: #0d0d0d86;
+    background: var(--cor0);
 }
 
 .converter>div {
@@ -351,7 +424,7 @@ button>img {
     width: 100%;
     overflow: auto;
 
-    color: #ffff;
+    color: var(--font);
 }
 
 #converter,
@@ -383,7 +456,7 @@ label {
 
 .converter hr {
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color:var(--font);
     border: none;
     border-radius: 150%;
     height: 5px;
@@ -407,7 +480,7 @@ label {
     height: 30px;
 
     border: black solid 3px;
-    background-color: #8FF5DB;
+    background-color: var(--cor5);
 }
 
 .rowInput button:hover {
@@ -429,7 +502,7 @@ label {
 /* parte3 */
 
 #parte3 {
-    background-color: #313131;
+    background-color: var(--cor2);
     height: 108vh;
 }
 
@@ -465,7 +538,7 @@ table th {
 
 table td {
     width: 33%;
-    background-color: #5f5f5ffd;
+    background-color: var(--inp);
 }
 
 /* footer */
