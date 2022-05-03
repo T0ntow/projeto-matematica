@@ -26,16 +26,12 @@
 .light-mode:root{
     --font: rgb(0, 0, 0);
     --fundo: rgb(197, 197, 197);
-    --back1: linear-gradient(#d8d8d8, rgb(255, 255, 255));
-    --inp: #f3f3f3;
+    --back1: linear-gradient(to bottom, #acacac, rgb(201, 201, 201), white );
+    --inp: #ffffff;
 
-    --cor0: #bbbbbb;
-    --cor1: #000000;
+    --cor0: #e7e7e7;
+    --cor1: #000000; 
     --cor2: #e7e7e7;
-    --cor5: #e4e4e4;
-    --cor6: #e4e4e4;
-    --cor7: #e4e4e4;
-    --cor8: #ffffff;
     --cor9: #000000c2;
 }
 .light-mode body{
@@ -76,6 +72,9 @@ input {
     border-right: 2px solid black;
     border-left: 2px solid black;
     border-top: 1px solid rgb(31, 31, 31);
+    box-shadow: 6px 5px 5px black;
+
+
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -287,6 +286,9 @@ main #background {
     grid-template-columns: repeat(4, 90px);
     grid-template-rows: minmax(128px, auto) repeat(4, 88px);
 }
+.grid-container input {
+   box-shadow: none;
+}
 
 .grid-container>button {
     font-size: 2rem;
@@ -331,6 +333,8 @@ main #background {
     width: 90%;
     background-color:var(--cor0);
     font-size: 1.6rem;
+    box-shadow: none;
+
 }
 button>img {
     width: 35px;
@@ -547,7 +551,7 @@ footer {
     background-color: var(--cor0);
     border-top: 3px solid black;
     height: 10vh;
-    color: white;
+    color: var(--font);
     text-align: center;
 
     justify-content: center;
@@ -556,7 +560,7 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: var(--font);
     text-decoration: underline;
 }
 
