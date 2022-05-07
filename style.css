@@ -280,8 +280,6 @@ main #background {
     display: grid;
     justify-content: center;
     align-content: center;
-    height: 480px;
-    width: 360px;
     margin: 23vh 0 10vh 0;
     grid-template-columns: repeat(4, 90px);
     grid-template-rows: minmax(128px, auto) repeat(4, 88px);
@@ -574,7 +572,7 @@ footer span {
     #parte2 {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 5vh;
+        padding-bottom: 5vh;
     }
 
     #parte2 h2 {
@@ -628,8 +626,9 @@ footer span {
 @media screen and (max-width: 600px) {
 
     .grid-container {
-        grid-template-columns: repeat(4, 85px);
-        grid-template-rows: minmax(110px, auto) repeat(4, 90px);
+        grid-template-columns: repeat(4, 90px);
+        grid-template-rows: minmax(128px, auto) repeat(4, 88px);
+        box-shadow: 3px 7px 14px 6px #000000;
     }
 
     .grid-container>.output>.previous-operand {
@@ -645,9 +644,11 @@ footer span {
     }
 
     .converter {
-        height: 470px;
+        height: 480px;
         width: 360px;
         font-size: 1.5rem;
+        padding: 15px;
+        
     }
 
     .converter input {
