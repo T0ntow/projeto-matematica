@@ -285,6 +285,7 @@ main #background {
     margin: 23vh 0 10vh 0;
     grid-template-columns: repeat(4, 90px);
     grid-template-rows: minmax(128px, auto) repeat(4, 88px);
+    box-shadow: 3px 7px 14px 6px #000000;
 }
 .grid-container input {
    box-shadow: none;
@@ -409,6 +410,7 @@ button>img {
     align-items: center;
 
     background: var(--cor0);
+    box-shadow: 3px 7px 14px 6px #000000;
 }
 
 .converter>div {
