@@ -91,7 +91,7 @@
 
           <!-- resultado final -->
           <div class="current-operand">
-            <input type="text" class="current-operand" id="current-operand" disabled="" > 
+            <div class="current-operand" id="current-operand"></div>
           </div>
 
         </div>
@@ -123,7 +123,7 @@
         <label>To base</label>
         <div class="rowInput">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"> - </button>
-          <input id="toBase" type="number" min="2" max="36" value="10" autocomplete="off">
+          <input id="toBase" type="number" min="2" max="36" value="02" autocomplete="off">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"> + </button>
         </div>
 
@@ -133,7 +133,8 @@
         </div>
         <hr>
         <div class="resultadoTela">
-          <p class="resultado">RESULT</p>
+          <div class="resultado" id="resultado">RESULT</div>
+          <button onclick="copiarTexto2()" id="copiar"><img src="img/copiar.png" alt=""></button>
         </div>
         <hr>
       </div>

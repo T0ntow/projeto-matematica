@@ -50,7 +50,7 @@ function result() {
     } else if (operador === '/') {
         result = number1 / number2;
     }
-    document.getElementById('current-operand').value = (result.toString(base));
+    document.getElementById('current-operand').innerHTML = (result.toString(base));
     document.querySelector('.current-operand').style.display = 'block';  
 
     console.log(result.toString(base))
@@ -73,8 +73,7 @@ function getNumbers2() {
     number1Parte2 = document.getElementById('num1Parte2').value;
     fromBase = document.getElementById('fromBase').value;
     toBase = document.getElementById('toBase').value;
-    tela = document.querySelector('.resultado');
-    
+    tela = document.getElementById('resultado');
 }
 function calcular() {
     getNumbers2();
@@ -105,14 +104,24 @@ function abrir(){
     }
 }
 
-// copiar
+// copiar - calculudaora
 
 function copiarTexto(){
-    let copiado = document.getElementById('current-operand').value;
+    let copiado = document.getElementById('current-operand').innerHTML;
 
     navigator.clipboard.writeText(copiado)
     console.log(copiado)
 };
+
+// copiar - conversora
+
+function copiarTexto2(){
+    let copiado2 = document.querySelector('.resultado').innerHTML;
+
+    navigator.clipboard.writeText(copiado2)
+    console.log(copiado2)
+};
+
 
 // 
 
@@ -132,5 +141,4 @@ function toggleTema(){
     }
     html.classList.toggle('light-mode');
     swit.classList.toggle('active');
-    
 }

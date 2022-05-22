@@ -73,8 +73,6 @@ input {
     border-left: 2px solid black;
     border-top: 1px solid rgb(31, 31, 31);
     box-shadow: 6px 5px 5px black;
-
-
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -87,20 +85,21 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 1rem;
 }
 
-.resultado::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 13px;
 }
 
-.resultado::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: rgb(19, 19, 19);
 }
 
-.resultado::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: rgb(41, 41, 41);
     border-radius: 20px;
     border: 3px solid rgb(117, 117, 117);
 }
 
+    
 /* HeaderMYP */
 
 .headerMyP {
@@ -204,7 +203,6 @@ main #background {
 
     position: absolute;
     z-index: -1;
-
     filter: grayscale(200%);
 }
 
@@ -329,24 +327,28 @@ main #background {
     word-break: break-all;
     text-transform: uppercase;
     background: var(--cor0);
+    max-height: 130px;
 }
 .grid-container>.output>.previous-operand {
     font-size: 1.2rem;
+    max-height: 45px;
     display: flex;
     overflow: hidden;
 
     color: var(--font);   
 }
 
-.grid-container>.output>.current-operand>input{
-    border: none;
+.grid-container>.output>.current-operand{
     text-align: right;
-    width: 90%;
-    background-color:var(--cor0);
+    max-width: 90%;
+    margin-top: 8px;
     font-size: 1.6rem;
-    box-shadow: none;
 
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
 }
+
 button>img {
     width: 35px;
     height: 35px;
@@ -395,7 +397,7 @@ button>img {
     font-size: 1rem;
 }
 
-.previous-operand div button:hover {
+#copiar:hover {
     cursor: pointer;
     transition: .5s ease;
     transform: scale(1.4);
@@ -412,7 +414,7 @@ button>img {
     font-size: 1.5rem;
 
     width: 360px;
-    padding: 15px;
+    padding: 10px;
     margin-top: 23vh;
     height: 480px;
     display: flex;
@@ -432,17 +434,40 @@ button>img {
 
 
 .converter .resultadoTela {
-    height: 88px;
+    height: 110px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.resultadoTela > button{
+    width: 50px;
+    height: 25px;
+    display: flex;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--cor5);
+}
+.resultadoTela > button img{
+    width: 25px;
+    height: 25px;
 }
 
 .converter .resultadoTela .resultado {
-    word-wrap: break-word;
-    width: 100%;
-    overflow: auto;
-
     color: var(--font);
-}
+    border: none;
+    text-align: center;
+    background-color: var(--cor0);
+    box-shadow: none;
 
+    max-width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+    
 #converter,
 #resetar {
     border: 0;
@@ -514,6 +539,7 @@ label {
     text-align: center;
 
 }
+
 
 /* parte3 */
 
