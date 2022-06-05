@@ -402,8 +402,15 @@ button>img {
     transition: .5s ease;
     transform: scale(1.4);
 }
-
+#sobre:hover {
+    cursor: pointer;
+    transition: .5s ease;
+    transform: scale(1.4);
+}
 #copiar:focus{
+    background-color:var(--cor7);
+}
+#sobre:focus{
     background-color:var(--cor7);
 }
 
@@ -424,6 +431,13 @@ button>img {
     background: var(--cor0);
     box-shadow: 3px 7px 14px 6px #000000;
 }
+
+.converter::before{
+    
+    width: 10px;
+    height: 10px;
+}
+
 
 .converter>div {
     display: flex;
