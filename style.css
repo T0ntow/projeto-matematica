@@ -672,7 +672,17 @@ footer span {
     #previous-operand-base {
         font-size: 1.5rem;
     }
+    .converter .resultadoTela {
+        height: 155px;
+    }
 
+    input{
+        min-height: 50px;
+    }
+
+    label{
+        font-size: 1.6rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -731,6 +741,13 @@ footer span {
         height: 25px;
     }
 
+    .converter .resultadoTela .resultado {
+        height: 45%;
+    }
+    .converter .resultadoTela {
+        margin: 0;
+        height: 113px;
+    }
    
 }
 
