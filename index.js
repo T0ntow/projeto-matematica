@@ -95,11 +95,11 @@ function abrir(){
     document.getElementById('previous-operand-num2').innerHTML = '';
     document.getElementById('previous-operand-op').innerHTML = '';
     document.querySelector('.current-operand').style.display = 'none'; 
-    
-    if (document.querySelector('.popup').style.display === 'none' ){
-        document.querySelector('.popup').style.display = 'block';
-    }else{
+
+    if (document.querySelector('.popup').style.display === 'block'){
         document.querySelector('.popup').style.display = 'none';
+    }else{
+        document.querySelector('.popup').style.display = 'block';
         document.querySelector('.current-operand').style.display = 'block';
     }
 }
